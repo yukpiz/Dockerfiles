@@ -2,13 +2,6 @@ FROM yukpiz/ubuntu:base
 MAINTAINER yukpiz<yukpiz@gmail.com>
 
 WORKDIR ~
-RUN apt-get update
-RUN apt-get upgrade
-RUN apt-get install -y wget
-RUN apt-get install -y gcc
-RUN apt-get install -y make
-RUN apt-get install -y git
-RUN apt-get install -y mercurial
 RUN apt-get install -y lua5.1
 RUN apt-get install -y lua5.1-dev
 

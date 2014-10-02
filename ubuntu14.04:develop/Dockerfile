@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM yukpiz/ubuntu:base
 MAINTAINER yukpiz<yukpiz@gmail.com>
 
 WORKDIR ~

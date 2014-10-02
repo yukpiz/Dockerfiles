@@ -1,3 +1,6 @@
+# Docker image build file.
+# TAG: yukpiz/ubuntu:base
+
 FROM ubuntu:14.04
 MAINTAINER yukpiz<yukpiz@gmail.com>
 

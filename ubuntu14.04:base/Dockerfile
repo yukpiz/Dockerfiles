@@ -4,9 +4,8 @@
 FROM ubuntu:14.04
 MAINTAINER yukpiz<yukpiz@gmail.com>
 
-WORKDIR ~
 RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 RUN apt-get install -y wget
 RUN apt-get install -y gcc
 RUN apt-get install -y make

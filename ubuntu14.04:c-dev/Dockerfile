@@ -4,7 +4,6 @@
 FROM yukpiz/ubuntu:develop
 MAINTAINER yukpiz<yukpiz@gmail.com>
 
-WORKDIR ~
 RUN apt-get install -y g++
 
 

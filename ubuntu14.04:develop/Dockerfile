@@ -6,6 +6,7 @@ MAINTAINER yukpiz<yukpiz@gmail.com>
 
 RUN apt-get install -y lua5.1
 RUN apt-get install -y lua5.1-dev
+RUN apt-get install -y ctags
 
 RUN mkdir -pv /workspace/repository/watch
 RUN hg clone https://vim.googlecode.com/hg /workspace/repository/watch/vim

@@ -6,6 +6,8 @@
 FROM debian
 MAINTAINER yukpiz<yukpiz@gmail.com>
 
+CMD /bin/bash
+
 RUN cat /etc/debian_version
 RUN apt-get update
 RUN apt-get upgrade -y
@@ -30,4 +32,3 @@ ADD nginx.conf /etc/nginx/
 RUN /etc/init.d/nginx start
 
 EXPOSE 80
-CMD /bin/bash

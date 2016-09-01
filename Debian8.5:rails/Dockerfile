@@ -12,7 +12,7 @@ RUN cat /etc/debian_version
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y nginx
-RUN apt-get install -y git wget bzip2 gcc libssl-dev libreadline-dev nginx libcurl4-openssl-dev g++
+RUN apt-get install -y git wget bzip2 gcc libssl-dev libreadline-dev nginx libcurl4-openssl-dev g++ make
 
 RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
 RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build

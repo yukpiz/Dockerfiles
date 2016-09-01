@@ -14,10 +14,10 @@ RUN apt-get upgrade -y
 RUN apt-get install -y nginx
 RUN apt-get install -y git wget bzip2 gcc libssl-dev libreadline-dev nginx libcurl4-openssl-dev g++
 
-RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-RUN git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
+RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
 
-ENV PATH $PATH:~/.rbenv/bin
+ENV PATH $PATH:/root/.rbenv/bin
 RUN echo $PATH
 RUN eval "(rbenv init -)"
 RUN rbenv --version && rbenv --help

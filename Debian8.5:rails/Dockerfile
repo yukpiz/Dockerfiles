@@ -16,10 +16,12 @@ RUN apt-get install -y git wget bzip2 gcc libssl-dev libreadline-dev nginx libcu
 
 RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
 RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
+RUN ./root/.rbenv/plugins/ruby-build/install.sh
 
 ENV PATH $PATH:/root/.rbenv/bin
 RUN echo $PATH
-RUN eval "(rbenv init -)"
+RUN echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
+RUN echo 'eval "$(rbenv init -)"' >> .bashrc
 RUN rbenv --version && rbenv --help
 RUN rbenv install --list | grep 2.3
 RUN rbenv install 2.3.1

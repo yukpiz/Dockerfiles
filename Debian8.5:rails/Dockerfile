@@ -26,6 +26,7 @@ RUN rbenv --version && rbenv --help
 RUN rbenv install --list | grep 2.3
 RUN rbenv install 2.3.1
 RUN rbenv global 2.3.1
+RUN rbenv versions
 RUN ruby --version
 
 RUN gem install passenger

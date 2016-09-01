@@ -1,5 +1,7 @@
 # Docker image build file.
-# TAG: yukpiz/debian:rails
+# TAG:   yukpiz/debian:rails
+# BUILD: docker build -t debian:rails ./
+# RUN: docker run --name [name] -it -p 8080:80 debian:rails /bin/bash
 
 FROM debian
 MAINTAINER yukpiz<yukpiz@gmail.com>
@@ -24,5 +26,7 @@ RUN ruby --version
 
 RUN gem install passenger
 RUN passenger-install-nginx-module --auto
+ADD nginx.conf /etc/nginx/
+RUN /etc/init.d/nginx start
 
 EXPOSE 80

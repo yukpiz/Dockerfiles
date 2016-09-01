@@ -16,6 +16,7 @@ RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 RUN git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 ENV PATH $PATH:~/.rbenv/bin
+RUN echo $PATH
 RUN eval "(rbenv init -)"
 RUN rbenv --version && rbenv --help
 RUN rbenv install --list | grep 2.3
@@ -29,3 +30,4 @@ ADD nginx.conf /etc/nginx/
 RUN /etc/init.d/nginx start
 
 EXPOSE 80
+CMD /bin/bash
